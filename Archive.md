@@ -1,3 +1,5 @@
+Article preview component
+
 import { useState, useEffect } from "react";
 import { fetchArticles } from "../utils/api-fetch-articles";
 
@@ -11,13 +13,13 @@ const ArticlePreview = () => {
   const firstFive = articles.slice(0, 5);
 
   return (
-    <ul className="articles-preview">
+    <!-- <ul className="articles-preview">
       {firstFive.map((article) => (
         <li className="single-article" key={article.id}>
           {article.title}
         </li>
       ))}
-    </ul>
+    </ul> -->
   );
 };
 export default ArticlePreview;
