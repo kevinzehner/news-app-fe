@@ -1,16 +1,19 @@
 import PostArticle from "./PostArticle";
+import ArticlePreview from "./Article-preview";
+import { Link } from "react-router-dom";
 
 const Feed = () => {
   return (
-    <div className="feed">
-      <PostArticle />
-      <ul className="articles-preview">
-        <li>Article</li>
-        <li>Article</li>
-        <li>Article</li>
-        <li>Article</li>
-      </ul>
-    </div>
+    <section className="feed">
+      <div className="inner-feed-container">
+        <PostArticle />
+        <Link to="/all-articles">
+          <button>view all articles</button>
+        </Link>
+      </div>
+      <h2>Popular articles</h2>
+      <ArticlePreview />
+    </section>
   );
 };
 
