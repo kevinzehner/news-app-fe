@@ -1,17 +1,32 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
+
+/* Header */
 
 .header {
   display: flex;
   justify-content: space-between;
+  border: red solid 2px;
+  margin-bottom: 3rem;
 }
 
 nav {
   display: flex;
   align-items: center;
   gap: 20px;
+  border: blue solid 2px;
+}
+
+/* Preview */
+
+.feed {
+  border: orange solid 2px;
+}
+
+.articles-preview {
+  list-style: none;
+  border: rgb(64, 255, 0) 2px solid;
 }
