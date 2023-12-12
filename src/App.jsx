@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Feed from "./components/Feed";
 import { Routes, Route } from "react-router-dom";
-import AllArticles from "./components/AllArticles";
+import FullArticle from "./components/FullArticle";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Feed />} />
-        <Route path="/all-articles" element={<AllArticles />} />
+        <Route path="/full-article/:article_id" element={<FullArticle />} />
       </Routes>
     </>
   );
