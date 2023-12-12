@@ -70,6 +70,10 @@ nav {
 
 .article-info {
   margin-bottom: 0.5rem;
+}
+
+.comment-container {
+  padding-left: 1rem;
   display: flex;
-  align-items: center;
+  gap: 0.5rem;
 }
