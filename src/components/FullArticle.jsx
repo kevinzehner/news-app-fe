@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchSingleArticle } from "../utils/api-fetch-single-article";
 import { Link } from "react-router-dom";
+import Comments from "./Comments";
+import { formatDate } from "../utils/formatDate";
 
 const FullArticle = () => {
   const { article_id } = useParams();
@@ -19,7 +21,7 @@ const FullArticle = () => {
   }
 
   return (
-    <section>
+    <section className="full-article-container">
       <Link to="/">
         <button className="home-button">Back to Home</button>
       </Link>
@@ -27,7 +29,7 @@ const FullArticle = () => {
         <div className="article-header">
           <p className="article-info">{article.topic}</p>
           <p>by {article.author}</p>
-          <p className="article-info"> {article.created_at}</p>
+          <p className="article-info"> {formatDate(article.created_at)}</p>
         </div>
         <h3>{article.title}</h3>
         <p className="article-body">{article.body}</p>
@@ -66,7 +68,7 @@ const FullArticle = () => {
         </div>
       </div>
       <section class="article-comments">
-        <h3>comments</h3>
+        <Comments article_id={article_id} />
       </section>
     </section>
   );
