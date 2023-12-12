@@ -40,8 +40,8 @@ nav {
 
 .single-article {
   margin: 1rem;
-  padding: 2rem;
-  background-color: orange;
+  padding: 1rem;
+  border: 3px solid orange;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -64,6 +64,12 @@ nav {
 }
 
 .votes-container {
+  display: flex;
+  align-items: center;
+}
+
+.article-info {
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
 }
