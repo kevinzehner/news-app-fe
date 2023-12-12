@@ -8,6 +8,7 @@ const AllArticles = () => {
 
   useEffect(() => {
     fetchArticles().then((articlesData) => {
+      console.log(articlesData);
       setArticles(articlesData);
       setLoading(false);
     });
