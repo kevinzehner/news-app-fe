@@ -1,6 +1,6 @@
-const SingleArticlePreview = (props) => {
-  const { article } = props;
+import { Link } from "react-router-dom";
 
+const SingleArticlePreview = ({ article }) => {
   const truncateArticle = (articleBody) => {
     if (articleBody.length > 150) {
       return articleBody.slice(0, 150) + "...";
@@ -87,6 +87,9 @@ const SingleArticlePreview = (props) => {
             />
           </svg>
         </div>
+        <Link to={`/full-article/${article.title}`}>
+          <button>Read Full Article</button>
+        </Link>
       </div>
     </div>
   );

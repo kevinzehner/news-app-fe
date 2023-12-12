@@ -19,7 +19,6 @@ const AllArticles = () => {
     <section className="article-preview-container">
       <h2>Articles</h2>
       {articles.map((article) => {
-        console.log(article);
         return <SingleArticlePreview key={article.title} article={article} />;
       })}
     </section>
