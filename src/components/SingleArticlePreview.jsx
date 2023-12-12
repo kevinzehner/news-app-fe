@@ -87,7 +87,7 @@ const SingleArticlePreview = ({ article }) => {
             />
           </svg>
         </div>
-        <Link to={`/full-article/${article.title}`}>
+        <Link to={`/full-article/${article.article_id}`}>
           <button>Read Full Article</button>
         </Link>
       </div>
