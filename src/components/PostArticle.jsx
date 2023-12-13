@@ -1,10 +1,10 @@
-const PostArticle = () => {
-  return (
-    <form>
-      <input></input>
-      <button>Post</button>
-    </form>
-  );
-};
+// const PostArticle = () => {
+//   return (
+//     <form>
+//       <input></input>
+//       <button>Post</button>
+//     </form>
+//   );
+// };
 
-export default PostArticle;
+// export default PostArticle;

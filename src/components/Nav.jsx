@@ -3,8 +3,8 @@ const Nav = () => {
     <nav>
       <button>topics</button>
       <form>
-        <input></input>
-        <button>search</button>
+        <input placeholder="search articles" className="search-input"></input>
+        <button className="search-button">go</button>
       </form>
     </nav>
   );
