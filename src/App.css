@@ -165,3 +165,7 @@ nav {
   gap: 2rem;
   margin-bottom: 2rem;
 }
+
+.comment-error {
+  color: red;
+}
