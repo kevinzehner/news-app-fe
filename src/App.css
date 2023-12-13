@@ -169,3 +169,10 @@ nav {
 .comment-error {
   color: red;
 }
+
+.avatar-img {
+  width: 5%;
+  max-width: 5%;
+  height: auto;
+  margin-bottom: 1rem;
+}

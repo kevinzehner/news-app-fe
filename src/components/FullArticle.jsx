@@ -52,6 +52,7 @@ const FullArticle = () => {
         </div>
         <h3>{article.title}</h3>
         <p className="article-body">{article.body}</p>
+        <img src={article.article_img_url} />
         <div className="votes-container">
           <button onClick={handleUpvote}>
             <svg
