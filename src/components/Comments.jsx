@@ -27,7 +27,7 @@ const Comments = ({ article_id }) => {
         </form>
       </div>
       {comments.map((comment) => (
-        <SingleComment comment={comment} />
+        <SingleComment key={comment.comment_id} comment={comment} />
       ))}
     </div>
   );
