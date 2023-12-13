@@ -10,7 +10,8 @@ const Comments = ({ article_id }) => {
     username: "grumpy19",
     body: "",
   });
-
+  const [postError, setPostError] = useState(false);
+  const [postingComment, setPostingComment] = useState(false);
   const [inputError, setInputError] = useState(false);
 
   useEffect(() => {
@@ -26,10 +27,17 @@ const Comments = ({ article_id }) => {
       setInputError(true);
       return;
     }
-    postComment(article_id, input).then((postedComment) => {
-      setComments([postedComment, ...comments]);
-      setInput({ ...input, body: "" });
-    });
+    setPostingComment(true);
+    postComment(article_id, input)
+      .then((postedComment) => {
+        setComments([postedComment, ...comments]);
+        setInput({ ...input, body: "" });
+        setPostingComment(false);
+        setPostError(false);
+      })
+      .catch(() => {
+        setPostError(true);
+      });
   };
 
   const handleInput = (event) => {
@@ -51,9 +59,16 @@ const Comments = ({ article_id }) => {
             onChange={handleInput}
             placeholder="Add a new comment"
           />
-          <button type="submit">Add</button>
+          <button type="submit" disabled={postingComment}>
+            Add
+          </button>
           {inputError && (
             <p className="comment-error">Please fill out the comment</p>
+          )}
+          {postError && (
+            <p className="comment-error">
+              Failed to post the comment. Please try again later.
+            </p>
           )}
         </form>
       </div>
