@@ -66,11 +66,9 @@ const Comments = ({ article_id }) => {
           <button type="submit" disabled={postingComment}>
             Add
           </button>
-          {inputError && (
-            <p className="comment-error">Please fill out the comment</p>
-          )}
+          {inputError && <p className="error">Please fill out the comment</p>}
           {postError && (
-            <p className="comment-error">
+            <p className="error">
               Failed to post the comment. Please try again later.
             </p>
           )}

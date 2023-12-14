@@ -9,6 +9,7 @@ const SingleComment = ({ comment, updateComments }) => {
   const { user } = useContext(UserContext);
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteSuccess, setDeleteSuccess] = useState(false);
+  const [deleteError, setDeleteError] = useState("");
 
   useEffect(() => {
     getallUsers().then((users) => {
@@ -22,6 +23,7 @@ const SingleComment = ({ comment, updateComments }) => {
   const handleDelete = () => {
     if (user.username === comment.author) {
       setIsDeleting(true);
+      setDeleteError("");
       deleteComment(comment.comment_id)
         .then(() => {
           updateComments();
@@ -29,6 +31,10 @@ const SingleComment = ({ comment, updateComments }) => {
           setTimeout(() => {
             setDeleteSuccess(false);
           }, 3000);
+        })
+        .catch((err) => {
+          console.log(err);
+          setDeleteError("Failed to delete. Please try again later.");
         })
         .finally(() => {
           setTimeout(() => {
@@ -57,6 +63,7 @@ const SingleComment = ({ comment, updateComments }) => {
       <p className="comment-body">{comment.body}</p>
       {isDeleting && <p>Deleting your comment...</p>}
       {deleteSuccess && <p>Comment deleted successfully!</p>}
+      {deleteError && <p className="error">{deleteError}</p>}
     </div>
   );
 };
