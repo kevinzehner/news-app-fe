@@ -6,13 +6,9 @@ const User = () => {
   const [userData, setUserData] = useState({});
 
   useEffect(() => {
-    getUser()
-      .then((user) => {
-        setUserData(user);
-      })
-      .catch((error) => {
-        console.error("Error fetching user data:", error);
-      });
+    getUser().then((user) => {
+      setUserData(user);
+    });
   }, []);
 
   return (
