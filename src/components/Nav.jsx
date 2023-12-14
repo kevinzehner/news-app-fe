@@ -1,3 +1,5 @@
+import User from "./User";
+
 const Nav = () => {
   return (
     <nav>
@@ -6,6 +8,7 @@ const Nav = () => {
         <input placeholder="search articles" className="search-input"></input>
         <button className="search-button">go</button>
       </form>
+      <User />
     </nav>
   );
 };
