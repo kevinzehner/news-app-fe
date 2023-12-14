@@ -14,11 +14,15 @@ const Comments = ({ article_id }) => {
   const [postingComment, setPostingComment] = useState(false);
   const [inputError, setInputError] = useState(false);
 
-  useEffect(() => {
+  const updateComments = () => {
     fetchComments(article_id).then((commentsData) => {
       setComments(commentsData);
       setLoading(false);
     });
+  };
+
+  useEffect(() => {
+    updateComments();
   }, []);
 
   const handleSubmit = (event) => {
@@ -62,18 +66,20 @@ const Comments = ({ article_id }) => {
           <button type="submit" disabled={postingComment}>
             Add
           </button>
-          {inputError && (
-            <p className="comment-error">Please fill out the comment</p>
-          )}
+          {inputError && <p className="error">Please fill out the comment</p>}
           {postError && (
-            <p className="comment-error">
+            <p className="error">
               Failed to post the comment. Please try again later.
             </p>
           )}
         </form>
       </div>
       {comments.map((comment) => (
-        <SingleComment key={comment.comment_id} comment={comment} />
+        <SingleComment
+          updateComments={updateComments}
+          key={comment.comment_id}
+          comment={comment}
+        />
       ))}
     </div>
   );
