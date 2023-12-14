@@ -14,11 +14,15 @@ const Comments = ({ article_id }) => {
   const [postingComment, setPostingComment] = useState(false);
   const [inputError, setInputError] = useState(false);
 
-  useEffect(() => {
+  const updateComments = () => {
     fetchComments(article_id).then((commentsData) => {
       setComments(commentsData);
       setLoading(false);
     });
+  };
+
+  useEffect(() => {
+    updateComments();
   }, []);
 
   const handleSubmit = (event) => {
@@ -73,7 +77,11 @@ const Comments = ({ article_id }) => {
         </form>
       </div>
       {comments.map((comment) => (
-        <SingleComment key={comment.comment_id} comment={comment} />
+        <SingleComment
+          updateComments={updateComments}
+          key={comment.comment_id}
+          comment={comment}
+        />
       ))}
     </div>
   );
