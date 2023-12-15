@@ -28,7 +28,7 @@ const SingleTopic = () => {
       <h2>Articles for {topicSlug}</h2>
       <ul className="topic-articles">
         {articles.map((article) => (
-          <li key={article.article_id}>
+          <li className="topic-preview-container" key={article.article_id}>
             <div className="single-article">
               <h3 className="preview-title">{article.title}</h3>
               <div className="article-top-container">

@@ -41,9 +41,6 @@ const FullArticle = () => {
 
   return (
     <section className="full-article-container">
-      <Link to="/">
-        <button className="home-button">Back to Home</button>
-      </Link>
       <div className="single-article">
         <div className="article-header">
           <p className="article-info">{article.topic}</p>

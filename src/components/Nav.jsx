@@ -7,6 +7,9 @@ const Nav = () => {
       <Link to="/topics">
         <button>Topics</button>
       </Link>
+      <Link to="/">
+        <button className="home-button">Back to Home</button>
+      </Link>
       {/* <form>
         <input placeholder="search articles" className="search-input"></input>
         <button className="search-button">go</button>
