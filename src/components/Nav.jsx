@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="sticky-nav">
       <Link to="/topics">
         <button>Topics</button>
       </Link>
-      <form>
+      {/* <form>
         <input placeholder="search articles" className="search-input"></input>
         <button className="search-button">go</button>
-      </form>
+      </form> */}
       <User />
     </nav>
   );

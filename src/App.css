@@ -21,6 +21,12 @@
   padding: 2rem;
   background-color: #242d40;
 }
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #242d40;
+  z-index: 100;
+}
 
 nav {
   display: flex;
