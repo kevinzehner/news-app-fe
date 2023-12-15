@@ -174,3 +174,12 @@ nav {
   height: auto;
   margin-bottom: 1rem;
 }
+
+/* topics */
+.topic-articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
