@@ -176,10 +176,30 @@ nav {
 }
 
 /* topics */
+.topics-container {
+  height: 100vh;
+}
+
 .topic-articles {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   list-style: none;
+}
+.topics-header {
+  margin-bottom: 1rem;
+}
+
+.topic-element {
+  margin-bottom: 0.5rem;
+}
+.topic-links {
+  color: #bfae99;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.topic-links:hover {
+  color: #998b7a;
 }

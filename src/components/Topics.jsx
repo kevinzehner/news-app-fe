@@ -20,18 +20,18 @@ const TopicArticles = () => {
   }, []);
 
   return (
-    <div>
-      <h2>All Topics</h2>
+    <section className="topics-container">
+      <h2 className="topics-header">All Topics</h2>
       <ul>
         {topics.map((topic) => (
-          <li key={topic.slug}>
-            <Link to={`/topics/${topic.slug}`}>
+          <li className="topic-element" key={topic.slug}>
+            <Link className="topic-links" to={`/topics/${topic.slug}`}>
               <p>{topic.description}</p>
             </Link>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
