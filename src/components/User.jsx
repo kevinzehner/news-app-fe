@@ -16,8 +16,11 @@ const User = () => {
   }, []);
 
   return (
-    <div>
-      <p>Logged in as {userData.username}</p>
+    <div className="user-container">
+      <p>
+        Logged in as <span className="bold">{userData.username}</span>
+      </p>
+      <img className="avatar-img" src={userData.avatar_url} />
     </div>
   );
 };

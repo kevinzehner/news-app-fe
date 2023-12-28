@@ -43,8 +43,10 @@ const FullArticle = () => {
     <section className="full-article-container">
       <div className="single-article">
         <div className="article-header">
-          <p className="article-info">{article.topic}</p>
-          <p>by {article.author}</p>
+          <p className="article-info bold">{article.topic}</p>
+          <p>
+            by <span className="bold">{article.author}</span>
+          </p>
           <p className="article-info"> {formatDate(article.created_at)}</p>
         </div>
         <h3>{article.title}</h3>
@@ -59,7 +61,12 @@ const FullArticle = () => {
               strokeWidth={3}
               stroke="currentColor"
               className="w-6 h-6"
-              style={{ width: "20px", height: "20px" }}
+              style={{
+                width: "20px",
+                height: "20px",
+                backgroundColor: "#fff",
+                color: "#f15e50",
+              }}
             >
               <path
                 strokeLinecap="round"
@@ -77,7 +84,12 @@ const FullArticle = () => {
               strokeWidth={3}
               stroke="currentColor"
               className="w-6 h-6"
-              style={{ width: "20px", height: "20px" }}
+              style={{
+                width: "20px",
+                height: "20px",
+                backgroundColor: "#fff",
+                color: "#f15e50",
+              }}
             >
               <path
                 strokeLinecap="round"

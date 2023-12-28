@@ -7,42 +7,67 @@
 #root {
   margin: 0 auto;
   text-align: center;
-  background-color: #213440;
-  color: #f2e6d0;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(36, 100%, 99%);
+
+  font-family: "Gothic A1", sans-serif;
 }
 
 /* Header */
 
+h1 {
+  color: hsl(5, 85%, 63%);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 3rem;
-  padding: 2rem;
-  background-color: #242d40;
+  padding: 0.5rem;
+}
+.title {
+  display: inline;
 }
 .sticky-header {
   position: sticky;
   top: 0;
-  background-color: #242d40;
+  background-color: hsl(36, 100%, 99%);
   z-index: 100;
+}
+
+h2 {
+  color: hsl(233, 10%, 51%);
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 30px;
 }
 
-.search-input {
-  padding: 0.2rem;
-  border-radius: 10px;
+.user-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem;
 }
 
-.search-button {
-  padding: 0.2rem;
+.main-btns {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
 }
 
+.topic-btn {
+  color: #f15e50;
+  border: none;
+  background-color: hsl(36, 100%, 99%);
+  font-size: 1.5rem;
+}
+
+.topic-btn:hover {
+  cursor: pointer;
+  color: #c14b40;
+}
 /* Preview */
 
 .feed {
@@ -60,12 +85,14 @@ nav {
   width: 80%;
   margin: 1rem;
   padding: 1rem;
-  background-color: #242d40;
+  background-color: hsl(36, 100%, 99%);
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  color: hsl(240, 100%, 5%);
+  border-bottom: 1px solid black;
 }
 
 .preview-title {
@@ -80,7 +107,6 @@ nav {
 }
 
 .lower-article-container {
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   text-align: center;
@@ -89,6 +115,9 @@ nav {
 
 .votes-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .article-info {
@@ -106,10 +135,11 @@ nav {
   max-width: 35%;
   height: auto;
   margin-bottom: 1rem;
+  border-radius: 15px;
 }
 
 .btn {
-  background-color: #bfae99;
+  background-color: hsl(5, 85%, 63%);
   color: white;
   padding: 0.7rem 1.2em;
   text-decoration: none;
@@ -119,7 +149,6 @@ nav {
 }
 
 .btn:hover {
-  background-color: #998b7a;
   cursor: pointer;
 }
 /* Full Article */
@@ -131,10 +160,9 @@ nav {
   justify-content: center;
 }
 
-.article-header {
-  border: blue solid 2px;
+.article {
+  display: flex;
 }
-
 .article-body {
   margin-bottom: 1rem;
 }
@@ -151,8 +179,10 @@ nav {
   text-align: left;
   margin-bottom: 1.5rem;
   width: 83.5%;
-  border: red solid 2px;
   padding: 0.5rem;
+  border: 1px solid black;
+  color: black;
+  border-radius: 10px;
 }
 
 .comments-header {
@@ -178,14 +208,13 @@ nav {
 }
 
 .topic-preview-container {
-  width: 80%; 
+  width: 80%;
   margin: 1rem;
   padding: 1rem;
-  background-color: #242d40;
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   text-align: center;
 }
 
@@ -202,13 +231,21 @@ nav {
 
 .topic-element {
   margin-bottom: 0.5rem;
+  border: 0.5px solid black;
+  padding: 2rem;
 }
 .topic-links {
-  color: #bfae99;
+  color: hsl(5, 85%, 63%);
   text-decoration: none;
   font-size: 2rem;
 }
 
 .topic-links:hover {
-  color: #998b7a;
+  color: #c14b40;
+}
+
+/* utils */
+
+.bold {
+  font-weight: 800;
 }
