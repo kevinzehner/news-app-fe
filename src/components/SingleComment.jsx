@@ -48,17 +48,21 @@ const SingleComment = ({ comment, updateComments }) => {
   return (
     <div className="single-comment">
       {authorInfo && authorInfo.avatar_url && (
-        <>
+        <div className="single-comment-header">
           <img src={authorInfo.avatar_url} className="avatar-img" />
           <p className="comment-info">
             By {comment.author} on {formatDate(comment.created_at)}
-            {user.username === comment.author && (
-              <button onClick={handleDelete} disabled={isDeleting}>
-                Delete
-              </button>
-            )}
           </p>
-        </>
+          {user.username === comment.author && (
+            <button
+              className="comment-delete"
+              onClick={handleDelete}
+              disabled={isDeleting}
+            >
+              Delete
+            </button>
+          )}
+        </div>
       )}
       <p className="comment-body">{comment.body}</p>
       {isDeleting && <p>Deleting your comment...</p>}

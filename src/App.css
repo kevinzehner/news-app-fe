@@ -118,6 +118,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 0.2rem;
+  font-weight: 800;
 }
 
 .article-info {
@@ -248,4 +249,24 @@ nav {
 
 .bold {
   font-weight: 800;
+}
+
+.single-comment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 800;
+}
+
+.comment-delete {
+  background-color: hsl(5, 85%, 63%);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.comment-delete:hover {
+  cursor: pointer;
+  background-color: #c14b40;
 }
