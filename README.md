@@ -1,8 +1,26 @@
-# React + Vite
+# Project Name
+The big news App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This project is the front-end part of full-stack news application which I completed during my time at the northcoders bootcamp. The project is built with the React JS libary and provides similar functunality to reddit.
 
-Currently, two official plugins are available:
+you can view the live version and repo here:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+As well as the repository of the backend Api that serves the project with news. 
+
+
+## Installation
+
+To install the project you can run
+
+ git clone https://github.com/kevinzehner/news-app-fe
+
+ you can then install then dependencies 
+ 
+  npm install 
+
+  finally to run the project you can use the command 
+
+  npm run dev
+
