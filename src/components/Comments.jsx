@@ -58,13 +58,18 @@ const Comments = ({ article_id }) => {
         <h3>comments</h3>
         <form onSubmit={handleSubmit}>
           <input
+            className="comment-input"
             type="text"
             value={input.body}
             onChange={handleInput}
-            placeholder="Add a new comment"
+            placeholder="Post a new comment"
           />
-          <button type="submit" disabled={postingComment}>
-            Add
+          <button
+            className="post-comment-btn"
+            type="submit"
+            disabled={postingComment}
+          >
+            Submit
           </button>
           {inputError && <p className="error">Please fill out the comment</p>}
           {postError && (
